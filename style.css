@@ -1,0 +1,100 @@
+    body{
+             background-color: #000;
+             margin: 0;
+             padding: 0;
+             color: white;
+        }
+        .hero{
+            background-image: url(images/wwering.png);
+            font-family: 'Anton',sans-serif;
+            background-size: cover;
+            height: 600px;
+            width: 100%;
+            max-width: 900px;
+            margin: auto;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 150px;
+        }
+        .work{
+            margin-top: 0px;
+            background-color: #E10600;
+            color: white;
+            border: none;
+            height: 40px;
+            width: 150px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: height 0.3s,width 0.3s;
+        }
+        .work:hover{
+            height: 50px;
+            width: 160px;
+        }
+        .about-me{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 150px;
+        }
+        .my-image{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        
+
+        .heading-about,
+        .heading-skills{
+          font-family: 'Anton',sans-serif;
+          font-size: 32px;
+          margin: 20px 0 10px;
+          color: #E10600;
+        }
+        .my-details{
+            width: 100%;
+        }
+        .my-image img{
+          
+          border-radius: 50%;
+          box-shadow: 0 0 0 4px #E10600, 0 12px 30px rgba(225, 6, 0, 0.45);
+          height: 400px;
+        }
+        .aboutmetext{
+          line-height: 30px;
+          font-family: 'Poppins', sans-serif;
+          margin-right: 30px;
+        }
+        .skills-list{
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          row-gap: 30px;
+          grid-template-rows: 1fr 1fr;
+          text-align: center;
+        }
+        .belt{
+          background-image: url(images/belt.png);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          height: 120px; /* increase this value */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 25px;
+          font-family: 'Poppins', sans-serif;
+        }
+        #js{
+          font-size: 20px;
+        }
+        .newh1{
+          font-family: 'Anton',sans-serif;
+          color: white;
+          font-size: 60px;
+          display: inline-block;
+          margin: auto;
+        }
