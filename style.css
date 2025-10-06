@@ -3,6 +3,7 @@
              margin: 0;
              padding: 0;
              color: white;
+             padding-top: 105px;
         }
         .hero{
             background-image: url(images/wwering.png);
@@ -26,15 +27,19 @@
             background-color: #E10600;
             color: white;
             border: none;
-            height: 40px;
-            width: 150px;
+            height: 60px;
+            width: 175px;
             cursor: pointer;
             border-radius: 10px;
-            transition: height 0.3s,width 0.3s;
+            font-size: 20px;
+            transition: height 0.3s,width 0.3s,font-size 0.3s;
+            padding: 15px;
+           
         }
         .work:hover{
-            height: 50px;
-            width: 160px;
+            height: 70px;
+            width:190px;
+            font-size: 25px;
         }
         .about-me{
             display: grid;
@@ -95,6 +100,162 @@
           font-family: 'Anton',sans-serif;
           color: white;
           font-size: 60px;
-          display: inline-block;
-          margin: auto;
+          display: flex;
+          justify-content: center;
+          margin-bottom: 40px;
         }
+        .project-section{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          row-gap: 40px;
+          column-gap: 40px;
+          margin-left: 100px;
+          margin-right: 100px;
+          margin-bottom: 150px;
+        }
+        .project{
+          box-shadow: 0 0 0 4px #E10600, 0 12px 30px rgba(225, 6, 0, 0.45);
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto 60px;
+          padding: 10px;
+          column-gap: 7px;
+          align-items: center;
+        }
+        .projectimg{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .pi{
+          width: 300px;
+        }
+        .projectdetails{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+        .projectname{
+          font-family:  'Anton',sans-serif;
+          font-size: 30px;
+          margin-bottom: 7px;
+        }
+        .projecttext{
+          font-family:'Poppins', sans-serif ;
+          margin-bottom: 15px;
+        }
+        .techstack{
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 10px;
+        }
+        .techstack div{
+          font-size: 25px;
+          background-color: #E10600;
+          font-family: 'Anton',sans-serif;
+          color: white;
+          padding: 10px;
+          cursor: pointer;
+          border-radius: 10px;
+          transition: font-size 0.4s;
+        }
+        .techstack div:hover{
+          font-size: 30px;
+        }
+        .githubbutton{
+          background-color: #E10600;
+          color: white;
+          font-size: 20px;
+          width: 300px;
+          border-radius: 120px;
+          justify-self: center;
+          cursor: pointer;
+          transition: transform 0.3s;
+          height: 50px;
+          grid-column: 1 / -1;
+        }
+        .githubbutton:hover{
+          transform: scale(1.05);
+        }
+        .finalfooter{
+          background-color: #111; /* optional for contrast */
+          text-align: center;
+          padding: 50px 0;
+          color: white;
+          font-family: 'Poppins', sans-serif;
+          display: flex;
+        
+          justify-content: space-between;
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+        .topper{
+          font-size: 25px;
+          font-weight: bold;
+        }
+        .top{
+          font-size: 25px;
+        }
+        .navigation{
+          position: fixed;
+          color: white;
+          background-color: #000;
+          display: flex;
+          justify-content: space-between;
+          top: 0px;
+          height: 70px;
+          right: 0px;
+          left: 0px;
+          text-align: center;
+          padding: 10px;
+        }
+        .navleft{
+          font-family: 'Anton', sans-serif;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+        }
+        .lefter{
+          margin-left: 10px;
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+        }
+        .nav-pfp {
+          width: 50px;
+}
+        .anmol{
+          font-size: 30px;
+          color: white;
+          margin-bottom: 0px;
+        }
+        .tag{
+          font-size: 20px;
+          color: white;
+          margin-top: 0px;
+        }
+        .navright{
+          display: flex;
+          gap: 30px;
+          justify-content: center;
+          align-items: center;
+        }
+        .link a{
+          color: white;
+          text-decoration: none;
+          font-size: 30px;
+          font-family: 'Poppins', sans-serif;
+          transition: font-size 0.5s,text-decoration 0.5s;
+        }
+
+        .link a:hover{
+          font-size: 35px;
+          text-decoration: underline;
+        }
+
+        
