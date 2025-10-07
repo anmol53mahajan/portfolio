@@ -86,7 +86,7 @@
           background-size: contain;
           background-position: center;
           background-repeat: no-repeat;
-          height: 120px; /* increase this value */
+          height: 120px; 
           display: flex;
           justify-content: center;
           align-items: center;
@@ -117,25 +117,35 @@
           box-shadow: 0 0 0 4px #E10600, 0 12px 30px rgba(225, 6, 0, 0.45);
           display: grid;
           grid-template-columns: 1fr 1fr;
-          grid-template-rows: auto 60px;
-          padding: 10px;
-          column-gap: 7px;
+          grid-template-rows: auto auto; 
+          padding: 16px; 
+          column-gap: 20px;
           align-items: center;
+          overflow: hidden; 
+          box-sizing: border-box;
         }
         .projectimg{
           display: flex;
           justify-content: center;
           align-items: center;
+          overflow: hidden; 
+          padding: 8px;
         }
         .pi{
           width: 300px;
+          height: auto;
+          display: block;
         }
+        .projectimg img{ max-width: 100%; height: auto; display: block; }
         .projectdetails{
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           text-align: center;
+          padding: 0 20px; 
+          min-width: 0;
+          max-width: 100%;
         }
         .projectname{
           font-family:  'Anton',sans-serif;
@@ -145,6 +155,8 @@
         .projecttext{
           font-family:'Poppins', sans-serif ;
           margin-bottom: 15px;
+          overflow-wrap: anywhere;
+          word-break: break-word;
         }
         .techstack{
           display: flex;
@@ -152,6 +164,8 @@
           justify-content: center;
           align-items: center;
           margin-bottom: 10px;
+          flex-wrap: wrap; 
+          max-width: 100%;
         }
         .techstack div{
           font-size: 25px;
@@ -161,10 +175,14 @@
           padding: 10px;
           cursor: pointer;
           border-radius: 10px;
-          transition: font-size 0.4s;
+          line-height: 1;
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+          white-space: nowrap; 
+          max-width: 100%;
         }
         .techstack div:hover{
-          font-size: 30px;
+          transform: translateY(-2px) scale(1.03);
+          box-shadow: 0 6px 16px rgba(225, 6, 0, 0.35);
         }
         .githubbutton{
           background-color: #E10600;
@@ -177,12 +195,19 @@
           transition: transform 0.3s;
           height: 50px;
           grid-column: 1 / -1;
+          place-self: center; 
+          display: inline-flex; 
+          align-items: center;
+          justify-content: center;
+          text-decoration: none; 
+          border: none; 
+          font-family: 'Anton', sans-serif;
         }
         .githubbutton:hover{
           transform: scale(1.05);
-        }
+        } 
         .finalfooter{
-          background-color: #111; /* optional for contrast */
+          background-color: #111; 
           text-align: center;
           padding: 50px 0;
           color: white;
@@ -212,6 +237,12 @@
           left: 0px;
           text-align: center;
           padding: 10px;
+        }
+        html{
+          scroll-behavior: smooth;
+        }
+        :target{
+          scroll-margin-top: 110px; 
         }
         .navleft{
           font-family: 'Anton', sans-serif;
@@ -258,4 +289,121 @@
           text-decoration: underline;
         }
 
-        
+        @media (max-width: 1024px){
+            .hero{
+                font-size: 34px;
+                height: 520px;
+                max-width: 100%;
+                margin-bottom: 120px;
+                padding: 0 24px;
+            }
+            .about-me{
+                grid-template-columns: 1fr;
+                row-gap: 40px;
+                padding: 0 24px;
+            }
+            .my-image img{
+                height: 320px;
+            }
+            .aboutmetext{
+                margin-right: 0;
+            }
+            .skills-list{
+                grid-template-columns: 1fr 1fr;
+                column-gap: 20px;
+                padding: 0 12px;
+            }
+            .project-section{
+                grid-template-columns: 1fr 1fr;
+                margin-left: 40px;
+                margin-right: 40px;
+            }
+            .project{
+                grid-template-columns: 1fr;
+                row-gap: 12px;
+                grid-template-rows: auto auto;
+                align-items: start;
+            .pi{
+                width: 100%;
+                max-width: 420px;
+            }
+            .techstack div{
+                font-size: 22px;
+            }
+            .githubbutton{
+                width: 240px;
+            }
+        }
+        @media (max-width: 768px){
+            body{
+                padding-top: 120px;
+            }
+            .navigation{
+                flex-wrap: wrap;
+                height: auto;
+                gap: 12px;
+                padding: 12px;
+            }
+            .navright{
+                flex-wrap: wrap;
+                gap: 16px;
+                width: 100%;
+                justify-content: center;
+            }
+            .anmol{ font-size: 26px; }
+            .tag{ font-size: 16px; }
+            .nav-pfp{ width: 44px; }
+            .link a{ font-size: 22px; }
+            .link a:hover{ font-size: 24px; }
+
+            .hero{ font-size: 30px; height: 460px; margin-bottom: 100px; }
+            .work{ height: 54px; width: 160px; font-size: 18px; }
+            .work:hover{ height: 58px; width: 170px; font-size: 20px; }
+
+            .skills-list{ grid-template-columns: 1fr 1fr; }
+            .belt{ height: 100px; font-size: 22px; }
+            #js{ font-size: 18px; }
+
+            .newh1{ font-size: 46px; }
+            .project-section{
+                grid-template-columns: 1fr;
+                margin-left: 24px;
+                margin-right: 24px;
+            }
+            .project{ align-items: start; }
+            .projectname{ font-size: 26px; line-height: 1.2; }
+            .techstack div{ font-size: 20px; }
+            .techstack div:hover{ transform: translateY(-2px) scale(1.03); }
+            .githubbutton{ width: 220px; font-size: 18px; height: 46px; }
+
+            .finalfooter{
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+                text-align: center;
+            }
+            .topper, .top{ font-size: 20px; }
+        }
+        @media (max-width: 480px){
+            body{ padding-top: 140px; }
+            .anmol{ font-size: 22px; }
+            .tag{ font-size: 14px; }
+            .link a{ font-size: 18px; }
+            .link a:hover{ font-size: 19px; }
+
+            .hero{ font-size: 24px; height: 400px; padding: 0 16px; }
+            .work{ height: 48px; width: 150px; font-size: 16px; }
+
+            .my-image img{ height: 260px; }
+            .heading-about, .heading-skills{ font-size: 26px; }
+            .aboutmetext{ line-height: 28px; padding: 0 6px; }
+            .skills-list{ grid-template-columns: 1fr; row-gap: 20px; }
+            .belt{ height: 90px; font-size: 20px; }
+            #js{ font-size: 16px; }
+
+            .newh1{ font-size: 38px; }
+            .pi{ max-width: 100%; width: 100%; }
+            .projecttext{ font-size: 14px; line-height: 1.5; }
+            .githubbutton{ width: 200px; height: 44px; font-size: 16px; }
+            .topper, .top{ font-size: 18px; }
+        }
