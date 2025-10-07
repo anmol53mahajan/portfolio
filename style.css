@@ -31,15 +31,21 @@
             width: 175px;
             cursor: pointer;
             border-radius: 10px;
-            font-size: 20px;
+            font-size: 24px;
+            font-family: 'Anton', sans-serif;
+            font-weight: 400;
             transition: height 0.3s,width 0.3s,font-size 0.3s;
             padding: 15px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
            
         }
         .work:hover{
             height: 70px;
             width:190px;
-            font-size: 25px;
+            font-size: 26px;
         }
         .about-me{
             display: grid;
@@ -288,6 +294,45 @@
           font-size: 35px;
           text-decoration: underline;
         }
+        .connect{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 100px;
+        }
+        .tagteam{
+          font-family: 'Anton',sans-serif;
+          color: white;
+          font-size: 60px;
+          display: flex;
+          justify-content: center;
+          margin-bottom: 20px;
+        }
+        .socials{
+          display: flex;
+          justify-content: center;
+          justify-content: space-between;
+          align-items: center;
+          gap: 30px;
+          flex-wrap: wrap;
+        }
+        .appimg{
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: #E10600 solid 3px;
+        }
+        .pi2{
+          width: 100px;
+          height: auto;
+          transition: width 0.6s;
+        }
+        .pi2:hover{
+          width: 120px;
+        }
+
 
         @media (max-width: 1024px){
             .hero{
@@ -323,6 +368,7 @@
                 row-gap: 12px;
                 grid-template-rows: auto auto;
                 align-items: start;
+            }
             .pi{
                 width: 100%;
                 max-width: 420px;
@@ -333,6 +379,11 @@
             .githubbutton{
                 width: 240px;
             }
+            /* Connect section - tablet */
+            .tagteam{ font-size: 48px; }
+            .socials{ gap: 24px; }
+            .pi2{ width: 90px; }
+            .pi2:hover{ width: 100px; }
         }
         @media (max-width: 768px){
             body{
@@ -357,8 +408,8 @@
             .link a:hover{ font-size: 24px; }
 
             .hero{ font-size: 30px; height: 460px; margin-bottom: 100px; }
-            .work{ height: 54px; width: 160px; font-size: 18px; }
-            .work:hover{ height: 58px; width: 170px; font-size: 20px; }
+            .work{ height: 54px; width: 160px; font-size: 20px; }
+            .work:hover{ height: 58px; width: 170px; font-size: 22px; }
 
             .skills-list{ grid-template-columns: 1fr 1fr; }
             .belt{ height: 100px; font-size: 22px; }
@@ -383,6 +434,12 @@
                 text-align: center;
             }
             .topper, .top{ font-size: 20px; }
+            /* Connect section - small tablet */
+            .tagteam{ font-size: 42px; text-align: center; padding: 0 12px; }
+            .socials{ gap: 20px; justify-content: center; }
+            .pi2{ width: 80px; }
+            .pi2:hover{ width: 88px; }
+            .appimg{ border-width: 2px; }
         }
         @media (max-width: 480px){
             body{ padding-top: 140px; }
@@ -392,7 +449,7 @@
             .link a:hover{ font-size: 19px; }
 
             .hero{ font-size: 24px; height: 400px; padding: 0 16px; }
-            .work{ height: 48px; width: 150px; font-size: 16px; }
+            .work{ height: 48px; width: 150px; font-size: 18px; }
 
             .my-image img{ height: 260px; }
             .heading-about, .heading-skills{ font-size: 26px; }
@@ -406,4 +463,10 @@
             .projecttext{ font-size: 14px; line-height: 1.5; }
             .githubbutton{ width: 200px; height: 44px; font-size: 16px; }
             .topper, .top{ font-size: 18px; }
+            /* Connect section - mobile */
+            .tagteam{ font-size: 34px; padding: 0 8px; text-align: center; }
+            .socials{ gap: 16px; }
+            .pi2{ width: 64px; }
+            .pi2:hover{ width: 70px; }
+            .appimg{ border-width: 2px; }
         }
